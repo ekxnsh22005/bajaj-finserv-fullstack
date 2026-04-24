@@ -1,0 +1,459 @@
+.shell {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  background: #fafafa;
+}
+
+.panelLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #374151;
+}
+
+.panelHint {
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.panelFoot {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #f3f4f6;
+  background: #fafafa;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #111827;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  resize: vertical;
+  min-height: 90px;
+  display: block;
+}
+
+.textarea::placeholder { color: #9ca3af; }
+
+.btnRow {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btnRun {
+  padding: 0.4rem 1.2rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btnRun:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.btnRun:active:not(:disabled) { transform: translateY(0); }
+
+.btnRun:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btnGhost {
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.btnGhost:hover {
+  color: #111827;
+  border-color: #9ca3af;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.errorIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #dc2626;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.results { display: flex; flex-direction: column; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 580px) {
+  .grid2 { grid-template-columns: 1fr; }
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1rem;
+  padding: 0.875rem 1rem;
+  font-size: 0.84rem;
+}
+
+.kv dt {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.kv dd {
+  font-family: 'Courier New', monospace;
+  color: #111827;
+  font-size: 0.82rem;
+  word-break: break-all;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.stat { flex: 1; text-align: center; }
+
+.statDiv {
+  width: 1px;
+  height: 2.5rem;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.statN {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.statK {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #374151;
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+
+.accent { color: #4f46e5 !important; }
+.red    { color: #dc2626 !important; }
+
+.countBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #111827;
+  background: #f3f4f6;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.hierarchyList {
+  display: flex;
+  flex-direction: column;
+}
+
+.hCard {
+  border-top: 1px solid #f3f4f6;
+  padding: 1rem;
+}
+
+.hCard:first-child { border-top: none; }
+
+.hCardCycle { background: #fff8f8; }
+
+.hCardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.hRoot {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.hRootKw {
+  font-size: 0.72rem;
+  color: #6b7280;
+  margin-right: 0.4rem;
+}
+
+.badgeCycle {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #dc2626;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+}
+
+.badgeDepth {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #4f46e5;
+  background: #ede9fe;
+  border: 1px solid #c4b5fd;
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+}
+
+.cycleNote {
+  font-size: 0.82rem;
+  color: #dc2626;
+  font-style: italic;
+}
+
+.cycleChain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0;
+}
+
+.cycleStep {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cycleNode {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #dc2626;
+  background: #fff1f1;
+  border: 1.5px solid #fca5a5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.cycleNodeBack { opacity: 0.45; }
+
+.cycleArrow {
+  color: #f87171;
+  font-size: 0.8rem;
+}
+
+.cycleLoopLabel {
+  font-size: 0.72rem;
+  color: #ef4444;
+  font-style: italic;
+  margin-left: 0.2rem;
+}
+
+.vizTree {
+  text-align: center;
+  overflow-x: auto;
+  padding: 0.75rem 0.5rem 0.25rem;
+}
+
+.vizTree ul {
+  padding-top: 28px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.vizTree ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-1px);
+  width: 2px;
+  height: 28px;
+  background: #d1d5db;
+}
+
+.vizTree > ul::before { display: none; }
+
+.vizTree li {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 28px 10px 0;
+  list-style: none;
+}
+
+.vizTree li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 50%;
+  height: 28px;
+  border-top: 2px solid #d1d5db;
+}
+
+.vizTree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 28px;
+  border-top: 2px solid #d1d5db;
+  border-left: 2px solid #d1d5db;
+}
+
+.vizTree li:only-child::before { display: none; }
+.vizTree li:only-child::after  { width: 0; border-top: none; }
+
+.vizTree li:first-child:not(:only-child)::before { border: none; }
+.vizTree li:first-child:not(:only-child)::after  { border-radius: 6px 0 0 0; }
+
+.vizTree li:last-child:not(:only-child)::after  { border: none; }
+.vizTree li:last-child:not(:only-child)::before {
+  border-right: 2px solid #d1d5db;
+  border-radius: 0 6px 0 0;
+}
+
+.vizNode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 14px;
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: #1d4ed8;
+  cursor: default;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.vizNode:hover {
+  border-color: #93c5fd;
+  background: #dbeafe;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.875rem 1rem;
+}
+
+.tagWarn {
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+}
+
+.tagInfo {
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  background: #f0fdfa;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+}
