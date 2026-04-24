@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'BFHL — Node Hierarchy Analyzer',
-  description: 'SRM Full Stack Engineering Challenge',
+  title: 'Node Hierarchy Analyzer',
+  description: 'Parse directed edges into hierarchical trees',
 };
 
 export default function RootLayout({ children }) {
